@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Forma</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform .2s;
+        }
+        .navbar-transparent {
+            background-color: rgba(0, 0, 0, 0.9); /* Transparent background */
+        }
+        
+        .card img {
+            height: 200px; /* Fiksna visina za sve slike */
+            object-fit: cover; /* Osigurava da slike lepo popunjavaju prostor */
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 100px;
+        }
+
+        .btn-primary {
+            background-color: #0056b3;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #004494;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+
+        html, body {
+            height: 100%; /* Postavlja visinu HTML-a i BODY-a na 100% */
+            margin: 0;
+            padding: 0;
+            background-color: #ececec;
+        }
+
+        .wrapper {
+            min-height: 100%; /* Min visina omotača je 100% */
+            margin-bottom: -50px; /* Negativni margin jednak visini footera */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            background-color: #343a40; /* Tamnija nijansa za profesionalniji izgled */
+            padding: 40px 20px; /* Povećane padding vrednosti za više prostora */
+            color: #f8f9fa;
+        }
+
+        .footer h5 {
+            font-weight: 500; /* Smanjen font-weight za naslove */
+            margin-bottom: 20px; /* Veći razmak ispod naslova */
+        }
+
+        .footer ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0; /* Uklanja defaultni gornji margin */
+        }
+
+        .footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+            font-weight: 400; /* Smanjen font-weight za linkove */
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .container {
+            max-width: 1140px;
+        }
+
+        .text-center {
+            margin-top: 30px; /* Povećan razmak iznad autorskih prava */
+            font-size: 0.9rem;
+            font-weight: 400; /* Smanjen font-weight za tekst autorskih prava */
+        }
+
+        /* Dodavanje margina između kolona za bolje razdvajanje */
+        .footer .col-md-4 {
+            margin-bottom: 20px;
+        }
+        .content {
+            flex: 1; /* Omogućava da sadržaj popuni prostor */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+                <a class="navbar-brand" href="index.php">
+                    <img src="Images/FilmskiStudio2.png" alt="Filmski Studio" height="30">
+                </a>
+            </nav>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Prijava</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="php/provera_prijave.php">
+                                    <div class="form-group">
+                                        <label for="korisnicko_ime">Korisničko ime:</label>
+                                        <input type="text" class="form-control" id="korisnicko_ime" name="korisnicko_ime" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lozinka">Lozinka:</label>
+                                        <input type="password" class="form-control" id="lozinka" name="lozinka" required>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="submit" id="btn" class="btn btn-primary">Prijavi se</button>
+                                        <button type="button" id="btn" class="btn btn-secondary" onclick="window.location.href='registracija.html';">Registruj se</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+    <footer class="footer bg-dark text-white pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Kontakt</h5>
+                    <ul class="list-unstyled">
+                        <li>Adresa: Ulica 123, Grad</li>
+                        <li>Telefon: +381 12 345 6789</li>
+                        <li>Email: kontakt@filmskistudio.rs</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>O nama</h5>
+                    <p>Kobrodošli na "FilmskiStudio", vašu krajnju destinaciju za detaljne uvide u svet filma. Naša platforma je posvećena pružanju sveobuhvatnih informacija o filmovima, od onih koji tek dolaze do klasika koji su oblikovali industriju.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Pratite nas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Facebook</a></li>
+                        <li><a href="#" class="footer-link">Instagram</a></li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                        <li><a href="#" class="footer-link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                &copy; 2024 Filmski Studio. Sva prava zadržana.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+              var linkBtn = document.getElementById("linkBtn");
+              var btn = document.getElementById("btn");
+
+              function redirectToPage() {
+                  window.location.href = "admin_login.html";
+              }
+  
+              linkBtn.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  btn.disabled = true;
+                  setTimeout(redirectToPage, 500);
+              });
+          });
+  </script>
+</body>
+</html>
+
+

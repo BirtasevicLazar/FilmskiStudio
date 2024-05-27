@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Registracija</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            padding-top: 80px;
+        }
+        .navbar-transparent {
+            background-color: rgba(0, 0, 0, 0.9); /* Transparent background */
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: #0056b3;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+        <a class="navbar-brand" href="index.php">
+            <img src="Images/FilmskiStudio2.png" alt="Filmski Studio" height="30">
+        </a>
+    </nav>
+    <div class="container">
+        <h2 class="text-center">Registracija</h2>
+        <form action="php/register.php" method="post">
+            <div class="form-group">
+                <label for="korisnicko_ime">Korisničko ime:</label>
+                <input type="text" class="form-control" id="korisnicko_ime" name="korisnicko_ime" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="lozinka">Lozinka:</label>
+                <input type="password" class="form-control" id="lozinka" name="lozinka" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Registruj se</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
